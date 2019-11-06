@@ -3,6 +3,7 @@ os: osx
 language: bash
 
 before_script:
+    - sw_vers
     - xcodebuild -version
     - xcodebuild -showsdks
     - ruby --version
