@@ -8,3 +8,4 @@ before_script:
     - ruby --version
     - java -version
     - xcrun simctl list
+    - rvm --version
