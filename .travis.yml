@@ -1,0 +1,10 @@
+os: osx
+
+language: bash
+
+before_script:
+    - xcodebuild -version
+    - xcodebuild -showsdks
+    - ruby --version
+    - java -version
+    - xcrun simctl list
