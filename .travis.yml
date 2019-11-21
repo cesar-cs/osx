@@ -13,3 +13,4 @@ before_script:
     - pod --version
     - gem which cocoapods
     - fastlane -v
+    - carthage version
