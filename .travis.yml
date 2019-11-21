@@ -10,3 +10,6 @@ before_script:
     - java -version
     - xcrun simctl list
     - rvm --version
+    - pod --version
+    - gem which cocoapods
+    - fastlane -v
