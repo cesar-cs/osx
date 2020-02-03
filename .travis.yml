@@ -1,28 +1,5 @@
-matrix:
-  include:
-    - os: osx
-      osx_image: xcode9.4
-    - os: osx
-      osx_image: xcode10.1
-    - os: osx
-      osx_image: xcode10.2
-    - os: osx
-      osx_image: xcode10.3   
-    - os: osx
-      osx_image: xcode11.2  
-
-            
-language: bash
-
-before_script:
-    - sw_vers
-    - xcodebuild -version
-    - xcodebuild -showsdks
-    - ruby --version
-    - java -version
-    - xcrun simctl list
-    - rvm --version
-    - pod --version
-    - gem which cocoapods
-    - fastlane -v
-    - carthage version
+os: windows
+script: 
+    - df -lh
+    - systeminfo
+language: shell
