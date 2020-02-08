@@ -1,22 +1,52 @@
-language: ruby
-os: osx
-rvm:
-- 2.4.0
-- 2.4.1
-- 2.4.2
-- 2.4.3
-- 2.4.4
-- 2.4.5
-- 2.4.6
-- 2.5.0
-- 2.5.1
-- 2.5.2
-- 2.5.3
-- 2.6.0
-- 2.6.1
-- 2.6.2
-- 2.6.3
-- 2.6.4
-- ruby-head
-install: true
-script: true
+matrix:
+  include:
+    - os: osx
+      osx_image: xcode7.3
+    - os: osx
+      osx_image: xcode8
+    - os: osx
+      osx_image: xcode9
+    - os: osx
+      osx_image: xcode9.1 
+    - os: osx
+      osx_image: xcode9.2
+    - os: osx
+      osx_image: xcode9.3
+    - os: osx
+      osx_image: xcode9.4
+    - os: osx
+      osx_image: xcode10
+    - os: osx
+      osx_image: xcode10.1   
+    - os: osx
+      osx_image: xcode10.2
+    - os: osx
+      osx_image: xcode10.3
+    - os: osx
+      osx_image: xcode11
+    - os: osx
+      osx_image: xcode11
+    - os: osx
+      osx_image: xcode11.1
+    - os: osx
+      osx_image: xcode11.2
+    - os: osx
+      osx_image: xcode11.3
+
+language: bash
+
+before_script:
+    - sw_vers
+    - xcodebuild -version
+    - xcodebuild -showsdks
+    - ruby --version
+    - java -version
+    - xcrun simctl list
+    - rvm --version
+    - pod --version
+    - gem which cocoapods
+    - fastlane -v
+    - carthage version
+    - xcrun --sdk macosx --show-sdk-path
+      
+
