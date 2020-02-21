@@ -17,6 +17,11 @@ matrix:
 
 language: bash
 
+addons:
+  homebrew:
+    packages:
+    - htop
+    
 before_script:
     - sw_vers
     - xcodebuild -version
@@ -31,6 +36,5 @@ before_script:
     - carthage version
     - xcrun --sdk macosx --show-sdk-path
     - brew --version
-    - brew install htop
-      
+
 
