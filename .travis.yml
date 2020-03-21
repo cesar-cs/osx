@@ -1,13 +1,13 @@
 matrix:
   include:
     - os: osx
-      osx_image: xcode11.3brew
+      osx_image: xcode11.3
     - os: osx
-      osx_image: xcode11.2brew
+      osx_image: xcode11.2
     - os: osx
-      osx_image: xcode11.1brew
+      osx_image: xcode11.1
     - os: osx
-      osx_image: xcode11brew
+      osx_image: xcode11
 
 language: bash
 
