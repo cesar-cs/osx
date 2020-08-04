@@ -1,7 +1,7 @@
 jobs:
   include:
     - os: osx
-      osx_image: xcode11.6n
+      osx_image: xcode10.2
     - os: osx
       osx_image: xcode12u
 
@@ -14,6 +14,7 @@ before_script:
     - xcodebuild -showsdks
     - ruby --version
     - java -version
+    - wget https://www.sqlite.org/2020/sqlite-amalgamation-3320300.zip
     - xcrun simctl list
     - rvm --version
     - pod --version
