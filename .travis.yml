@@ -3,7 +3,7 @@ jobs:
     - os: osx
       osx_image: xcode12
     - os: osx
-      osx_image: xcode11.6
+      osx_image: xcode12gm
 
 language: bash
 
