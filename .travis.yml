@@ -13,7 +13,6 @@ before_script:
     - xcodebuild -version
     - xcodebuild -showsdks
     - ruby --version
-    - java -version
     - xcrun simctl list
     - rvm --version
     - pod --version
