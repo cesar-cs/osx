@@ -14,9 +14,6 @@ before_script:
     - xcodebuild -showsdks
     - ruby --version
     - java -version
-    - wget https://www.sqlite.org/2020/sqlite-amalgamation-3320300.zip
-    - wget https://www2.sqlite.org/2020/sqlite-amalgamation-3320300.zip
-    - wget https://www3.sqlite.org/2020/sqlite-amalgamation-3320300.zip
     - xcrun simctl list
     - rvm --version
     - pod --version
