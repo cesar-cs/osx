@@ -4,6 +4,10 @@ jobs:
       osx_image: xcode12
     - os: osx
       osx_image: xcode15
+    - os: osx
+      osx_image: xcode9
+    - os: osx
+      osx_image: xcode11
 
 language: bash
 
