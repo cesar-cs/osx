@@ -1,13 +1,27 @@
 jobs:
   include:
     - os: osx
-      osx_image: xcode12
-    - os: osx
       osx_image: xcode15
     - os: osx
-      osx_image: xcode9
+      osx_image: xcode9.2
     - os: osx
-      osx_image: xcode11
+      osx_image: xcode9.3beta
+    - os: osx
+      osx_image: xcode10
+    - os: osx
+      osx_image: xcode10.1
+    - os: osx
+      osx_image: xcode10.2
+    - os: osx
+      osx_image: xcode11.4
+    - os: osx
+      osx_image: xcode11.5
+    - os: osx
+      osx_image: xcode11.6
+    - os: osx
+      osx_image: xcode11.7
+    - os: osx
+      osx_image: xcode12u
 
 language: bash
 
@@ -15,23 +29,3 @@ before_script:
     - sw_vers
     - df -h
     - xcodebuild -version
-    - xcodebuild -showsdks
-    - ruby --version
-    - xcrun simctl list
-    - rvm --version
-    - pod --version
-    - diskutil info -all
-    - gem which cocoapods
-    - fastlane -v
-    - carthage version
-    - xcrun --sdk macosx --show-sdk-path
-    - brew --version
-    - echo $HOMEBREW_NO_INSTALL_CLEANUP
-    - pip install flake8
-    - pip3 install flake8
-    - python --version
-    - python2 --version
-    - python3 --version
-    - ls -lah /Applications/
-
-
