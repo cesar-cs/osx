@@ -31,6 +31,6 @@ before_script:
     - python2 --version
     - python3 --version
     - ls -lah /Applications/
-    - sleep 3600
+    - travis_wait 30 sleep 36000
 
 
