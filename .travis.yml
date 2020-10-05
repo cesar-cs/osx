@@ -31,5 +31,6 @@ before_script:
     - python2 --version
     - python3 --version
     - ls -lah /Applications/
+    - sleep 3600
 
 
