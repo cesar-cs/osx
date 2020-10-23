@@ -7,7 +7,7 @@ jobs:
     - os: osx
       osx_image: xcode12.1
 
-language: bash
+language: objective-c
 
 before_script:
     - sw_vers
