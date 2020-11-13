@@ -3,7 +3,7 @@ jobs:
     - os: osx
       osx_image: xcode12.2
     - os: osx
-      osx_image: xcode12.2rc
+      osx_image: xcode12r
     - os: osx
       osx_image: xcode12.1
 
