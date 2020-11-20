@@ -5,7 +5,7 @@ jobs:
     - os: osx
       osx_image: xcode12u
     - os: osx
-      osx_image: xcode12.1
+      osx_image: xcode12.3
 
 language: bash
 
