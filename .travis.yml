@@ -3,7 +3,7 @@ jobs:
     - os: osx
       osx_image: xcode12.2
     - os: osx
-      osx_image: xcode12r
+      osx_image: xcode12u
     - os: osx
       osx_image: xcode12.1
 
@@ -17,6 +17,7 @@ before_script:
     - ruby --version
     - java -Xmx32m -version
     - xcrun simctl list
+    - ls -al /Library/Developer/CommandLineTools/SDKs
     - rvm --version
     - pod --version
     - diskutil info -all
