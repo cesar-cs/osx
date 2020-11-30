@@ -1,37 +1,10 @@
-jobs:
-  include:
-    - os: osx
-      osx_image: xcode12.2
-    - os: osx
-      osx_image: xcode12u
-    - os: osx
-      osx_image: xcode12.3
+arch: ppc64le
+dist: bionic
 
-language: bash
+services:
+  - postgresql
 
-before_script:
-    - sw_vers
-    - df -h
-    - xcodebuild -version
-    - xcodebuild -showsdks
-    - ruby --version
-    - java -Xmx32m -version
-    - xcrun simctl list
-    - ls -al /Library/Developer/CommandLineTools/SDKs
-    - rvm --version
-    - pod --version
-    - diskutil info -all
-    - gem which cocoapods
-    - fastlane -v
-    - carthage version
-    - xcrun --sdk macosx --show-sdk-path
-    - brew --version
-    - echo $HOMEBREW_NO_INSTALL_CLEANUP
-    - pip install flake8
-    - pip3 install flake8
-    - python --version
-    - python2 --version
-    - python3 --version
-    - ls -lah /Applications/
-
-
+script:
+  - psql -c 'create database name;' -U travis;
+  - psql -c 'create database email;' -U postgres;
+  - sudo psql -c 'create database login;' -U postgres;
