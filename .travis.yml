@@ -1,6 +1,6 @@
-language: csharp
-solution: lcmsNET.sln
-mono: none
+# language: csharp
+# solution: lcmsNET.sln
+# mono: none
 dist: bionic
 before_install:
   - sudo apt-get update
@@ -9,3 +9,4 @@ dotnet: 2.1.811
 script:
   - dotnet restore
   - dotnet test
+  - dotnet --info
