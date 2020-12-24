@@ -7,6 +7,7 @@ before_install:
   - sudo apt-get install -y liblcms2-2
 # dotnet: 2.1.811
 script:
-  - dotnet restore
-  - dotnet test
-  - dotnet --info
+#   - dotnet restore
+#   - dotnet test
+#   - dotnet --info
+  - uname -a  
