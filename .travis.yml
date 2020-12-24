@@ -3,9 +3,9 @@ jobs:
     - os: osx
       osx_image: xcode12.2
     - os: osx
-      osx_image: xcode12
-    - os: osx
       osx_image: xcode12.3
+    - os: osx
+      osx_image: xcode12.3f
 
 language: bash
 
