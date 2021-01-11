@@ -1,10 +1,5 @@
-arch: ppc64le
-dist: bionic
-
-services:
-  - postgresql
+os: linux-ppc64le
 
 script:
-  - psql -c 'create database name;' -U travis;
-  - psql -c 'create database email;' -U postgres;
-  - sudo psql -c 'create database login;' -U postgres;
+  - unane -a
+
