@@ -1,29 +1,11 @@
 jobs:
   include:
     - os: osx
-      osx_image: xcode15
+      osx_image: xcode12.3
     - os: osx
-      osx_image: xcode9.2
-    - os: osx
-      osx_image: xcode9.3beta
-    - os: osx
-      osx_image: xcode10
-    - os: osx
-      osx_image: xcode10.1
-    - os: osx
-      osx_image: xcode10.2
-    - os: osx
-      osx_image: xcode10.3
-    - os: osx    
-      osx_image: xcode11.4
-    - os: osx
-      osx_image: xcode11.5
-    - os: osx
-      osx_image: xcode11.6
-    - os: osx
-      osx_image: xcode11.7
-    - os: osx
-      osx_image: xcode12u
+      osx_image: xcode12
+
+
 
 language: bash
 
@@ -31,3 +13,11 @@ before_script:
     - sw_vers
     - df -h
     - xcodebuild -version
+    - rvm --version
+    - echo $rvm_path
+    - cat $rvm_path/user/db
+    - rvm use 2.7.0 --install --binary --fuzzy --debug
+    
+    
+    
+    
