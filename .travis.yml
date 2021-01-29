@@ -1,6 +1,8 @@
-os: linux-ppc64le
+os: linux
 
 script:
   - uname -a
   - arch
+  - docker run -it rabbitmq:3.7.12-management-alpine
+  - docker run -it hello-world
 
