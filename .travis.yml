@@ -3,7 +3,7 @@ os: linux
 script:
   - uname -a
   - arch
-  - /etc/docker/daemon.json
+  - sudo /etc/docker/daemon.json
   - docker run -itd rabbitmq:3.7.12-management-alpine
   - docker run -it hello-world
 
