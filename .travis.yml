@@ -2,10 +2,6 @@ jobs:
   include:
     - os: osx
       osx_image: xcode12.3
-    - os: osx
-      osx_image: xcode12
-
-
 
 language: bash
 
