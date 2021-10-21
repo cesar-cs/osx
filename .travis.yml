@@ -3,13 +3,13 @@ jobs:
     - os: osx
       osx_image: xcode12.1
     - os: osx
-      osx_image: xcode12.2
-    - os: osx
-      osx_image: xcode12.3
-    - os: osx
-      osx_image: xcode12.4
-    - os: osx
       osx_image: xcode12.5
+    - os: osx
+      osx_image: xcode13.1
+#     - os: osx
+#       osx_image: xcode12.4
+#     - os: osx
+#       osx_image: xcode12.5
 #     - os: osx
 #       osx_image: xcode12.5.1
       
