@@ -24,6 +24,7 @@ before_script:
 #     - brew install openssl
 #     - openssl version -a
 #     - curl -v https://rubies.travis-ci.org/osx/10.15/x86_64/ruby-2.4.1.tar.bz2
+    - df -h
     - xcversion simulators
     - xcodebuild -version
     - xcodebuild -showsdks
