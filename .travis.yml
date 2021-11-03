@@ -19,8 +19,6 @@ language: bash
 
 before_script:
     - sw_vers
-    - curl -o- -L https://yarnpkg.com/install.sh | bash
-    - yarn add react
     - wget https://letsencrypt.org/certs/isrgrootx1.der
     - sudo security import isrgrootx1.der -k ~/Library/Keychains/login.keychain
     - sudo security import isrgrootx1.der -k /Library/Keychains/System.keychain
