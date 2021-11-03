@@ -1,11 +1,11 @@
 jobs:
   include:
     - os: osx
-      osx_image: xcode12.1
-    - os: osx
-      osx_image: xcode12.5
-    - os: osx
-      osx_image: xcode13.1
+      osx_image: xcode10.1
+#     - os: osx
+#       osx_image: xcode12.5
+#     - os: osx
+#       osx_image: xcode13.1
 #     - os: osx
 #       osx_image: xcode12.4
 #     - os: osx
@@ -19,33 +19,38 @@ language: bash
 
 before_script:
     - sw_vers
+    - yarn add react
+    - wget https://letsencrypt.org/certs/isrgrootx1.der
+    - sudo security import isrgrootx1.der -k ~/Library/Keychains/login.keychain
+    - sudo security import isrgrootx1.der -k /Library/Keychains/System.keychain
+    - yarn add react
 #     - openssl version -a
 #     - curl -v https://rubies.travis-ci.org/osx/10.15/x86_64/ruby-2.4.1.tar.bz2
 #     - brew install openssl
 #     - openssl version -a
 #     - curl -v https://rubies.travis-ci.org/osx/10.15/x86_64/ruby-2.4.1.tar.bz2
-    - df -h
-    - xcversion simulators
-    - xcodebuild -version
-    - xcodebuild -showsdks
-    - ruby --version
-    - java -Xmx32m -version
-    - xcrun simctl list
-    - ls -al /Library/Developer/CommandLineTools/SDKs
-    - rvm --version
-    - pod --version
-    - diskutil info -all
-    - gem which cocoapods
-    - fastlane -v
-    - carthage version
-    - xcrun --sdk macosx --show-sdk-path
-    - brew --version
+#     - df -h
+#     - xcversion simulators
+#     - xcodebuild -version
+#     - xcodebuild -showsdks
+#     - ruby --version
+#     - java -Xmx32m -version
+#     - xcrun simctl list
+#     - ls -al /Library/Developer/CommandLineTools/SDKs
+#     - rvm --version
+#     - pod --version
+#     - diskutil info -all
+#     - gem which cocoapods
+#     - fastlane -v
+#     - carthage version
+#     - xcrun --sdk macosx --show-sdk-path
+#     - brew --version
 #     - echo $HOMEBREW_NO_INSTALL_CLEANUP
 #     - pip install flake8
 #     - pip3 install flake8
 #     - python --version
-    - python2 --version
-    - python3 --version
+#     - python2 --version
+#     - python3 --version
 #     - ls -lah /Applications/
 
 
