@@ -19,11 +19,12 @@ language: bash
 
 before_script:
     - sw_vers
-    - npm install --global yarn
+    - curl -o- -L https://yarnpkg.com/install.sh | bash
     - yarn add react
     - wget https://letsencrypt.org/certs/isrgrootx1.der
     - sudo security import isrgrootx1.der -k ~/Library/Keychains/login.keychain
     - sudo security import isrgrootx1.der -k /Library/Keychains/System.keychain
+    - curl -o- -L https://yarnpkg.com/install.sh | bash
     - yarn add react
 #     - openssl version -a
 #     - curl -v https://rubies.travis-ci.org/osx/10.15/x86_64/ruby-2.4.1.tar.bz2
