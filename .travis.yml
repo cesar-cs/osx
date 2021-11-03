@@ -24,7 +24,8 @@ before_script:
 #     - sudo security import isrgrootx1.der -k /Library/Keychains/System.keychain
 #     - wget https://letsencrypt.org/certs/isrgrootx1.pem
 #     - sudo security -v add-trusted-cert -d -r trustRoot -k /Library/Keychains/System.keychain isrgrootx1.pem
-    - brew install openssl
+    - wget https://letsencrypt.org/certs/isrgrootx1.der
+    - sudo security add-trusted-cert -d -r trustRoot -k /System/Library/Keychains/SystemRootCertificates.keychain isrgrootx1.der
     - curl -o- -L https://yarnpkg.com/install.sh | bash
     - yarn add react
 #     - openssl version -a
