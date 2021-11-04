@@ -1,17 +1,17 @@
 jobs:
   include:
     - os: osx
-#       osx_image: xcode10.1
-#     - os: osx
-#       osx_image: xcode12.5
-#     - os: osx
-#       osx_image: xcode13.1
-#     - os: osx
-#       osx_image: xcode12.4
-#     - os: osx
-#       osx_image: xcode12.5
-#     - os: osx
-#       osx_image: xcode12.5.1
+      osx_image: xcode9.4
+    - os: osx
+      osx_image: xcode10
+    - os: osx
+      osx_image: xcode10.1
+    - os: osx
+      osx_image: xcode10.2
+    - os: osx
+      osx_image: xcode10.3
+    - os: osx
+      osx_image: xcode12.5.1
       
 
 
@@ -19,6 +19,8 @@ language: bash
 
 before_script:
     - sw_vers
+    - uname -a
+    - curl -o- -L https://yarnpkg.com/install.sh | bash
     - wget https://curl.se/ca/cacert.pem
     - sudo rm -rf /etc/ssl/cert.pem
     - sudo mv cacert.pem /etc/ssl/cert.pem
