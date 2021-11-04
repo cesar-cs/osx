@@ -40,6 +40,8 @@ before_script:
     - sudo security -v add-trusted-cert -d -r trustRoot -k "/Library/Keychains/System.keychain" isrgrootx1.der
     - sudo security -v add-trusted-cert -d -r trustRoot -k "/Library/Keychains/System.keychain" isrg-root-x2.der
     - sudo security -v add-trusted-cert -d -r trustRoot -k "/Library/Keychains/System.keychain" lets-encrypt-r3.der
+    - export HOMEBREW_NO_AUTO_UPDATE=1
+    - brew install curl
     - curl -o- -L https://yarnpkg.com/install.sh | bash
 #     - openssl version -a
 #     - curl -v https://rubies.travis-ci.org/osx/10.15/x86_64/ruby-2.4.1.tar.bz2
