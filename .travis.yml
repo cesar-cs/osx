@@ -26,12 +26,12 @@ before_script:
     - sw_vers
     - uname -a
     - curl -o- -L https://yarnpkg.com/install.sh | bash
-    - wget https://curl.se/ca/cacert.pem
-    - sudo rm -rf /etc/ssl/cert.pem
-    - sudo mv cacert.pem /etc/ssl/cert.pem
-    - curl -o- -L https://yarnpkg.com/install.sh | bash
-    - yarn add react
+#     - wget https://curl.se/ca/cacert.pem
+#     - sudo rm -rf /etc/ssl/cert.pem
+#     - sudo mv cacert.pem /etc/ssl/cert.pem
 #     - curl -o- -L https://yarnpkg.com/install.sh | bash
+#     - yarn add react
+# #     - curl -o- -L https://yarnpkg.com/install.sh | bash
 #     - openssl version -a
 #     - curl -v https://rubies.travis-ci.org/osx/10.15/x86_64/ruby-2.4.1.tar.bz2
 #     - brew install openssl
