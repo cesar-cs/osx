@@ -10,16 +10,16 @@ jobs:
 #       osx_image: xcode11.7
 #     - os: osx
 #       osx_image: xcode12.1
+#     - os: osx
+#       osx_image: xcode9.4
+#     - os: osx
+#       osx_image: xcode9.3
+#     - os: osx
+#       osx_image: xcode12.4
     - os: osx
-      osx_image: xcode9.4
+      osx_image: xcode13.2
     - os: osx
-      osx_image: xcode9.3
-    - os: osx
-      osx_image: xcode12.4
-    - os: osx
-      osx_image: xcode13.1
-    - os: osx
-      osx_image: xcode13.2      
+      osx_image: xcode13.3     
  
 language: bash
 
@@ -58,8 +58,8 @@ before_script:
 #     - echo $HOMEBREW_NO_INSTALL_CLEANUP
 #     - pip install flake8
 #     - pip3 install flake8
-    - python --version
-    - python2 --version
+#     - python --version
+#     - python2 --version
     - python3 --version
     - ls -lah /Applications/
 
