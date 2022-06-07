@@ -19,7 +19,9 @@ jobs:
     - os: osx
       osx_image: xcode13.2
     - os: osx
-      osx_image: xcode13.3     
+      osx_image: xcode13.3
+    - os: osx
+      osx_image: xcode13.4      
  
 language: bash
 
@@ -43,7 +45,7 @@ before_script:
     - xcversion simulators
     - xcodebuild -version
     - xcodebuild -showsdks
-#     - ruby --version
+    - ruby --version
     - java -Xmx32m -version
     - xcrun simctl list
 #     - ls -al /Library/Developer/CommandLineTools/SDKs
