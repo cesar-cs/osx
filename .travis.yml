@@ -1,9 +1,13 @@
-os: linux
+os: osx
+osx_image: xcode-cs
+  
 
-script:
+before_script:
+  - sw_vers
   - uname -a
-  - arch
-  - sudo /etc/docker/daemon.json
-  - docker run -itd rabbitmq:3.7.12-management-alpine
-  - docker run -it hello-world
-
+  - rvm --version
+    
+script:
+  - rvm use 3.0.0
+  - ruby --version 
+  
