@@ -8,6 +8,7 @@ before_script:
   - rvm --version
     
 script:
+  - rvm install 3.0.0
   - rvm use 3.0.0
   - ruby --version 
   
