@@ -23,7 +23,7 @@ before_script:
 
 script:
 #   - rvm install 3.0.0
-#   - rvm get head
+  - rvm get head
   - rvm --version
   - rvm use 2.7.4 --install --binary --fuzzy
 #   - rvm use 3.0.0
