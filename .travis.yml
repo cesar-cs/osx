@@ -1,9 +1,13 @@
 jobs:
   include:
     - os: osx
-      osx_image: xcode12.3
-
-language: bash
+      osx_image: xcode-cs
+    - os: osx
+      osx_image: xcode13.4 
+    - os: osx
+      osx_image: xcode13.3
+    - os: osx
+      osx_image: xcode13.2
 
 before_script:
     - sw_vers
@@ -12,7 +16,16 @@ before_script:
     - rvm --version
     - echo $rvm_path
     - cat $rvm_path/user/db
-    - rvm use 2.7.0 --install --binary --fuzzy --debug
+
+script:
+#   - rvm install 3.0.0
+#   - rvm get head
+  - rvm --version
+  - rvm use 3.0.0 --install --binary --fuzzy
+#   - rvm use 3.0.0
+  - ruby --version
+  - gem install rake
+  
     
     
     
