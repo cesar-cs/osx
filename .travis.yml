@@ -8,6 +8,10 @@ jobs:
       osx_image: xcode13.3
     - os: osx
       osx_image: xcode13.2
+    - os: osx
+      osx_image: xcode13.1
+    - os: osx
+      osx_image: xcode12.5
 
 before_script:
     - sw_vers
@@ -21,7 +25,7 @@ script:
 #   - rvm install 3.0.0
 #   - rvm get head
   - rvm --version
-  - rvm use 2.7.4 --install --binary --fuzzy
+  - rvm use 3.0.0 --install --binary --fuzzy
 #   - rvm use 3.0.0
   - ruby --version
   - gem install rake
