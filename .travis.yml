@@ -1,5 +1,5 @@
 os: osx
-osx_image: xcode-cs
+osx_image: xcode13.4
  
 
 language: ruby
