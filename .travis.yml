@@ -1,52 +1,31 @@
-os: osx
-osx_image: xcode13.4
- 
-
-language: ruby
-rvm:
-  - 2.7.4
-  - 3.0.0
-  - 3.1.1
- 
+jobs:
+  include:
+    - os: osx
+      osx_image: xcode-cs
+    - os: osx
+      osx_image: xcode13.4 
+    - os: osx
+      osx_image: xcode13.3
+    - os: osx
+      osx_image: xcode13.2
+    - os: osx
+      osx_image: xcode13.1
+    - os: osx
+      osx_image: xcode12.5
 
 before_script:
     - sw_vers
-    - uname -a
-#     - curl -o- -L https://yarnpkg.com/install.sh
-#     - df -h
-#     - wget https://curl.se/ca/cacert.pem
-#     - sudo rm -rf /etc/ssl/cert.pem
-#     - sudo mv cacert.pem /etc/ssl/cert.pem
-#     - curl -o- -L https://yarnpkg.com/install.sh | bash
-#     - yarn add react
-# #     - curl -o- -L https://yarnpkg.com/install.sh | bash
-#     - openssl version -a
-#     - curl -v https://rubies.travis-ci.org/osx/10.15/x86_64/ruby-2.4.1.tar.bz2
-#     - brew install openssl
-#     - openssl version -a
-#     - curl -v https://rubies.travis-ci.org/osx/10.15/x86_64/ruby-2.4.1.tar.bz2
-#     - df -h
-#     - xcversion simulators
+    - df -h
     - xcodebuild -version
-    - xcodebuild -showsdks
-    - ruby --version
-#     - java -Xmx32m -version
-#     - xcrun simctl list
-#     - ls -al /Library/Developer/CommandLineTools/SDKs
     - rvm --version
-#     - pod --version
-#     - diskutil info -all
-#     - gem which cocoapods
-#     - fastlane -v
-#     - carthage version
-#     - xcrun --sdk macosx --show-sdk-path
-#     - brew --version
-#     - echo $HOMEBREW_NO_INSTALL_CLEANUP
-#     - pip install flake8
-#     - pip3 install flake8
-#     - python --version
-#     - python2 --version
-#     - python3 --version
-#     - ls -lah /Applications/
+    - echo $rvm_path
+    - cat $rvm_path/user/db
 
-
+script:
+  - rvm install 3.0.0
+#   - rvm get 1.29.12
+  - rvm --version
+  - rvm use 3.0.0 --install --binary --fuzzy
+#   - rvm use 3.0.0
+  - ruby --version
+  - gem install rake
