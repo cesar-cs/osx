@@ -1,7 +1,7 @@
 jobs:
   include:
     - os: osx
-      osx_image: xcode-cs
+      osx_image: xcode14
     - os: osx
       osx_image: xcode13.4 
     - os: osx
@@ -12,23 +12,37 @@ jobs:
       osx_image: xcode13.1
     - os: osx
       osx_image: xcode12.5
+    - os: osx
+      osx_image: xcode12.4
+    - os: osx
+      osx_image: xcode12.3
+     - os: osx
+      osx_image: xcode12.2
+    - os: osx
+      osx_image: xcode12.1
+    - os: osx
+      osx_image: xcode11
+    - os: osx
+      osx_image: xcode10
+    - os: osx
+      osx_image: xcode9.4      
 
 before_script:
     - sw_vers
-    - df -h
+#     - df -h
     - xcodebuild -version
-    - rvm --version
-    - echo $rvm_path
-    - cat $rvm_path/user/db
+#     - rvm --version
+#     - echo $rvm_path
+#     - cat $rvm_path/user/db
 
-script:
-#   - rvm install 3.0.0
-  - rvm get 1.29.12
-  - rvm --version
-  - rvm use 3.0.0 --install --binary --fuzzy
-#   - rvm use 3.0.0
-  - ruby --version
-  - gem install rake
+# script:
+# #   - rvm install 3.0.0
+#   - rvm get 1.29.12
+#   - rvm --version
+#   - rvm use 3.0.0 --install --binary --fuzzy
+# #   - rvm use 3.0.0
+#   - ruby --version
+#   - gem install rake
   
     
     
