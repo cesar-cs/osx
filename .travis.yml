@@ -12,6 +12,10 @@ osx_image: xcode14.2
 before_script:
     - sw_vers
     - uname -a
+    - time wget https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-421.0.0-darwin-x86_64.tar.gz
+    - time tar -xvf google-cloud-cli-421.0.0-darwin-x86_64.tar.gz
+    - time ./google-cloud-sdk/install.sh -q 
+    - ./google-cloud-sdk/bin/gcloud version
 #     - curl -o- -L https://yarnpkg.com/install.sh
 #     - df -h
 #     - wget https://curl.se/ca/cacert.pem
