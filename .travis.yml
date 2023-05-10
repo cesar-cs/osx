@@ -1,56 +1,17 @@
+language: shell
+
 os: osx
-osx_image: xcode14.2
- 
 
-# language: ruby
-# rvm:
-#   - 2.7.4
-#   - 3.0.0
-#   - 3.1.1
- 
+before_install:
+  - git clone https://github.com/travis-ci/packer-templates.git
+script:
+  - ls -la
+  - python3 -V
+  - python -V
 
-before_script:
-    - sw_vers
-    - uname -a
-    - time wget https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-421.0.0-darwin-x86_64.tar.gz
-    - time tar -xvf google-cloud-cli-421.0.0-darwin-x86_64.tar.gz
-    - time ./google-cloud-sdk/install.sh --install-python false -q
-    - ./google-cloud-sdk/bin/gcloud version
-#     - curl -o- -L https://yarnpkg.com/install.sh
-#     - df -h
-#     - wget https://curl.se/ca/cacert.pem
-#     - sudo rm -rf /etc/ssl/cert.pem
-#     - sudo mv cacert.pem /etc/ssl/cert.pem
-#     - curl -o- -L https://yarnpkg.com/install.sh | bash
-#     - yarn add react
-# #     - curl -o- -L https://yarnpkg.com/install.sh | bash
-#     - openssl version -a
-#     - curl -v https://rubies.travis-ci.org/osx/10.15/x86_64/ruby-2.4.1.tar.bz2
-#     - brew install openssl
-#     - openssl version -a
-#     - curl -v https://rubies.travis-ci.org/osx/10.15/x86_64/ruby-2.4.1.tar.bz2
-    - df -h
-    - xcversion simulators
-    - xcodebuild -version
-    - xcodebuild -showsdks
-    - ruby --version
-    - java -Xmx32m -version
-    - xcrun simctl list
-#     - ls -al /Library/Developer/CommandLineTools/SDKs
-    - rvm --version
-    - pod --version
-    - diskutil info -all
-    - gem which cocoapods
-    - fastlane -v
-    - carthage version
-    - xcrun --sdk macosx --show-sdk-path
-    - brew --version
-#     - echo $HOMEBREW_NO_INSTALL_CLEANUP
-#     - pip install flake8
-#     - pip3 install flake8
-#     - python --version
-#     - python2 --version
-    - python3 --version
-    - ls -lah /Applications/
-
-
+jobs:
+  include:
+    - osx_image: xcode13.1
+    - osx_image: xcode13.2
+    - osx_image: xcode13.3
+    - osx_image: xcode14.2
