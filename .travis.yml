@@ -15,3 +15,5 @@ jobs:
     - osx_image: xcode13.2
     - osx_image: xcode13.3
     - osx_image: xcode14.2
+    - osx_image: xcode12.5
+    - osx_image: xcode11
