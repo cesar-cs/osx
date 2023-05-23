@@ -27,18 +27,19 @@ jobs:
     - os: osx
       osx_image: xcode12.3 
 
-before_script:
-    - sw_vers
-#     - df -h
-    - xcodebuild -version
+# before_script:
+#     - sw_vers
+# #     - df -h
+#     - xcodebuild -version
 #     - rvm --version
 #     - echo $rvm_path
 #     - cat $rvm_path/user/db
 
 script:
-    - df -h /
-    - ruby --version
-    - rvm get stable
+    - sleep 660 2>&1 /dev/null
+#     - df -h /
+#     - ruby --version
+#     - rvm get stable
     
 #   - rvm install 3.0.0
 #   - rvm get 1.29.12
