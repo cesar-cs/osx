@@ -36,7 +36,7 @@ jobs:
 #     - cat $rvm_path/user/db
 
 script:
-    - sleep 660 2>&1 /dev/null
+    - sleep 660
 #     - df -h /
 #     - ruby --version
 #     - rvm get stable
