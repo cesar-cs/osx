@@ -33,6 +33,16 @@ before_script:
     - xcodebuild -version
     - gem install rake
     - rvm --version
+
+
+deploy:
+  provider: releases
+  token: $GITHUB_TOKEN
+  file_glob: true
+  overwrite: true
+  file: README.md
+  skip_cleanup: true
+  draft: true    
     
 #     - rvm --version
 #     - echo $rvm_path
