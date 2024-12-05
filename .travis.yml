@@ -1,7 +1,11 @@
 jobs:
   include:
     - os: osx
-      osx_image: xcode14
+      osx_image: xcode14.2
+    - os: osx
+      osx_image: xcode14.1
+    - os: osx
+      osx_image: xcode14      
     - os: osx
       osx_image: xcode13.4 
     - os: osx
@@ -15,11 +19,17 @@ jobs:
     - os: osx
       osx_image: xcode12.4
     - os: osx
+      osx_image: xcode12.3      
+    
+
+language: ruby
+rvm:
+  - 3.1.1
 
 
 before_script:
     - sw_vers
-#     - df -h
+    - ruby --version
     - xcodebuild -version
 #     - rvm --version
 #     - echo $rvm_path
