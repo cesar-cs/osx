@@ -4,22 +4,22 @@ jobs:
       osx_image: xcode14.2
     - os: osx
       osx_image: xcode14.1
-    - os: osx
-      osx_image: xcode14      
-    - os: osx
-      osx_image: xcode13.4 
-    - os: osx
-      osx_image: xcode13.3
-    - os: osx
-      osx_image: xcode13.2
-    - os: osx
-      osx_image: xcode13.1
-    - os: osx
-      osx_image: xcode12.5
-    - os: osx
-      osx_image: xcode12.4
-    - os: osx
-      osx_image: xcode12.3      
+    # - os: osx
+    #   osx_image: xcode14      
+    # - os: osx
+    #   osx_image: xcode13.4 
+    # - os: osx
+    #   osx_image: xcode13.3
+    # - os: osx
+    #   osx_image: xcode13.2
+    # - os: osx
+    #   osx_image: xcode13.1
+    # - os: osx
+    #   osx_image: xcode12.5
+    # - os: osx
+    #   osx_image: xcode12.4
+    # - os: osx
+    #   osx_image: xcode12.3      
     
 
 language: ruby
