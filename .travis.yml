@@ -44,7 +44,7 @@ deploy:
   draft: true
   edge: true
   on:
-    repo: cesar-cs/osx
+    branches: jobs
 
     
 #     - rvm --version
