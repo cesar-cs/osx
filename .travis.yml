@@ -23,8 +23,7 @@ jobs:
     
 
 language: ruby
-rvm:
-  - 3.1.1
+
 
 
 before_script:
