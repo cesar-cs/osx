@@ -22,9 +22,9 @@ jobs:
     #   osx_image: xcode12.3      
     
 
-language: ruby
-rvm:
-  - 3.1.1
+language: python
+# rvm:
+#   - 3.1.1
 
 
 before_script:
