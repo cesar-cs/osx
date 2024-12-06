@@ -43,7 +43,6 @@ deploy:
   file: README.md
   skip_cleanup: true
   draft: true
-  edge: true
   on:
     branch: jobs
 
